@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 00:39:17 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/14 16:13:03 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/14 17:49:50 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ void    ft_bzero(void *s, size_t n);
 void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void    *ft_memmove(void *dst, const void *src, size_t len);
 size_t  ft_strlcpy(char * dst, const char *src, size_t dstsize);
-size_t  strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 
 #endif
