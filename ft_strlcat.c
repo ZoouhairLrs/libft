@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:12:17 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/15 20:15:46 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/15 20:53:49 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (res);
 }
 
-// int main()
-// {
-//     char d[100] = "zouhair";
-//     char s[100] = "laaroussi";
+int main()
+{
+    char d[100] = "zouhair";
+    char s[100] = "laaroussi";
 
-//     printf("%lu\n", ft_strlcat(d, s, 5));
-//     printf("%s", d);
-// }
+    printf("%lu\n", ft_strlcat(d, s, 9));
+    printf("%s", d);
+}
