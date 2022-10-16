@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 01:14:56 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 02:26:54 by zlaarous         ###   ########.fr       */
+/*   Created: 2022/10/16 17:26:03 by zlaarous          #+#    #+#             */
+/*   Updated: 2022/10/16 17:57:43 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+char    *strdup(const char *s1)
 {
-    int i;
-    
-    i = 0;
-    while(s1[i] != '\0' && s2[i] != '\0' && i < n)
-    {
-        if(s1[i] != s2[i])
-            return s1[i] - s2[i];
-        i++;
-    }
-    
-    if(i != n)
-		return (s1[i] - s2[i]);
-    return 0;
-}
+    char	*ma;
+	int		len;
+	int		i;
 
-
-int main()
-{
-    char s1[] = "zouhair";
-    char s2[] = "";
-    
-    printf("%d\n", strncmp(s2, s1, 3));
-    printf("%d", ft_strncmp(s2, s1, 3));
+	len = (int) ft_strlen(s) + 1;
+	ma = malloc(sizeof (char) * len);
+	if (ma == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		ma[i] = s[i];
+		i++;
+	}
+	ma[i] = '\0'; //last case for '\0'.
+	return (ma);
 }
