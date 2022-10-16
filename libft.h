@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 00:39:17 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/15 20:59:15 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/16 01:15:18 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ size_t  ft_strlcpy(char * dst, const char *src, size_t dstsize);
 size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 int ft_toupper(int c);
 int ft_tolower(int c);
-char *strchr(const char *s, int c);
+char *ft_strchr(const char *s, int c);
+char *ft_strrchr(const char *s, int c);
+int strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
