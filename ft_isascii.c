@@ -6,20 +6,21 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 02:36:37 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/14 02:47:44 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/16 23:07:45 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include<ctype.h>
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if(c >= 0 && c <= 177)
-    {
-        return 1;
-    }else
-    {
-        return 0;
-    }
+	if (c >= 0 && c <= 177)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

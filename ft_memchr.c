@@ -6,15 +6,15 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 02:28:33 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 03:03:09 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/16 22:40:30 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    size_t			i;
+	size_t			i;
 	unsigned char	*ca1;
 	unsigned char	ca2;
 
@@ -36,7 +36,5 @@ void *ft_memchr(const void *s, int c, size_t n)
 // {
 //     char s[] = "zouhair";
 //     int c = 'u';
-    
-    
 //     printf("%s", ft_memchr(s, c, 5));
 // }
