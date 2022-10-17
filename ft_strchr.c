@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:58:38 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 23:09:33 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/17 18:52:15 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,13 @@ char	*ft_strchr(const char *s, int c)
 
 	ca1 = (char)c;
 	i = 0;
-	while (s[i] != '\0')
+	while (s || !s)
 	{
 		if (s[i] == ca1)
 			return ((char *)&s[i]);
-		i++;
+		if (s[i] == '\0')
+			return (NULL);
+		s++;
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-//     char s[] = "zouhair";
-//     int c = 'a';
-
-//     printf("%s", ft_strchr(s, c));
-//     //printf("%s", strchr(s, c));
-// }

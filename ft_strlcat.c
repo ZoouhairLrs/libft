@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:12:17 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 22:47:48 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/17 19:12:37 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	len_src;
 	size_t	i;
 
+	if (size == 0 || size < ft_strlen(dst))
+		return (size + ft_strlen(src));
 	s = (char *)src;
 	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(s);
@@ -27,9 +29,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	if (size > len_dst)
 		res = len_src + len_dst;
-	else
-		res = len_src + size;
-	while (s[i] && (len_dst) < size)
+	while ((len_dst + 1) < size)
 	{
 		dst[len_dst] = s[i];
 		len_dst++;
@@ -38,12 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[len_dst] = '\0';
 	return (res);
 }
-
-// int main()
-// {
-//     char d[100] = "zouhair";
-//     char s[100] = "laaroussi";
-
-//     printf("%lu\n", ft_strlcat(d, s, 9));
-//     printf("%s", d);
-// }

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 00:59:39 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 23:11:07 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/17 17:52:27 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
+	char	*ret;
 	int		i;
-	char	ca1;
 
-	ca1 = (char)c;
-	i = ft_strlen(s) - 1;
-	while (s[i] != '\0')
+	ret = NULL;
+	i = 0;
+	while (s[i])
 	{
-		if (s[i] == ca1)
-			return ((char *)&s[i]);
-		i--;
+		if (s[i] == (char)c)
+			ret = (char *)&s[i];
+		i++;
 	}
-	return (NULL);
+	if (c == '\0')
+		ret = (char *)&s[i];
+	return (ret);
 }
-
-// int main()
-// {
-//     char s[] = "analahiazoo";
-//     int c = '0';
-
-//     printf("%s", ft_strrchr(s, c));
-//     //printf("%s", strchr(s, c));
-// }

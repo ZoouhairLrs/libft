@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 02:28:33 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 22:40:30 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/17 03:32:11 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-//     char s[] = "zouhair";
-//     int c = 'u';
-//     printf("%s", ft_memchr(s, c, 5));
-// }

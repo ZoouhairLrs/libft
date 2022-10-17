@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 02:48:16 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 22:40:14 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/17 03:36:12 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
+	if (c >= 32 && c < 127)
 	{
 		return (1);
 	}
@@ -23,10 +23,3 @@ int	ft_isprint(int c)
 		return (0);
 	}
 }
-
-// int main()
-// {
-//     int c = 20;
-
-//     printf("%d", ft_isprint(c));
-// }

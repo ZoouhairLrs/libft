@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:26:03 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 22:47:32 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/17 03:31:34 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ char	*ft_strdup(const char *s1)
 	ma[i] = '\0';
 	return (ma);
 }
-
-// int main()
-// {
-// 	char s[10] = "zouhair";
-
-// 	printf("%s", ft_strdup(s));
-// }

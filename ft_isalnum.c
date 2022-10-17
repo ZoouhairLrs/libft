@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 02:19:45 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 22:38:48 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/17 03:26:39 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*
-int main()
-{
-	int c = '\0';
-	printf("%d", ft_isalnum(c));
-}
-*/

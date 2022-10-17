@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:17:59 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 23:10:19 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/17 03:20:33 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-// int main ()
-// {
-//     int c ='\0';
-//     printf("%d", ft_toupper(c));
-// }

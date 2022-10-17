@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/16 21:58:42 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/17 20:27:24 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	ft_atoi(const char *str)
 	int	i;
 	int	sign;
 	int	result;
+	int	previous_result;
 
 	sign = 1;
 	result = 0;
@@ -29,18 +30,20 @@ int	ft_atoi(const char *str)
 			sign = -sign;
 		i++;
 	}
-	while (str[i])
+	while (ft_isdigit(str[i]) && str[i])
 	{
-		if (ft_isdigit(str[i]))
-			result = result * 10 + str[i] - 48;
+		previous_result = result;
+		result = previous_result * 10;
+
+		if (result / 10 != previous_result)
+		{
+			if (sign == -1)
+				return (0);
+			else
+				return (-1);
+		}
+		result += (str[i] - 48);
 		i++;
 	}
 	return (sign * result);
 }
-
-// int main()
-// {
-//     char s[] = "1458735";
-
-//     printf("%d", ft_atoi("---15656"));
-// }
