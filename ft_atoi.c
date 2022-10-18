@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/17 20:27:24 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/18 09:37:57 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	ft_atoi(const char *str)
 	{
 		previous_result = result;
 		result = previous_result * 10;
-
 		if (result / 10 != previous_result)
 		{
 			if (sign == -1)

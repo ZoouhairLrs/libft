@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 23:55:14 by zlaarous          #+#    #+#              #
-#    Updated: 2022/10/17 02:45:44 by zlaarous         ###   ########.fr        #
+#    Updated: 2022/10/18 10:44:33 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,11 @@ SRCS		= ft_memset.c \
 			  ft_calloc.c \
 			  ft_strdup.c \
 			  ft_strlcat.c \
+			  ft_putchar_fd.c \
+			  ft_putstr_fd.c \
+			  ft_putendl_fd.c \
+			  ft_putnbr_fd.c \
+			  ft_striteri.c
 
 BNS_SRCS	= ft_lstnew.c \
 			  ft_lstadd_front.c \
