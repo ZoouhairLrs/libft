@@ -6,15 +6,15 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:53:42 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/18 16:24:34 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/18 22:10:18 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	isset(char c, const char *set)
+static int	is_in_set(char c, char const *set)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (set[i])
@@ -26,57 +26,29 @@ static int	isset(char c, const char *set)
 	return (0);
 }
 
-static int	ftrimlen(int len, const char *s, const char *set)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = len - 1;
-	while (s[i] && isset(s[i], set) == 1 && len > 1)
-	{
-		i++;
-		len--;
-	}
-	while (s[j] && isset(s[j], set) == 1 && len > 1)
-	{
-		j--;
-		len--;
-	}
-	return (len);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	int		len;
-	int		trimlen;
-	char	*news;
+	char	*trimmed;
+	size_t	i;
+	size_t	first_part;
+	size_t	last_part;
 
-	if (!s1)
-		return (0);
+	first_part = 0;
+	last_part = ft_strlen(s1);
+
+	while (s1[first_part] && is_in_set(s1[first_part], set))
+		first_part++;
+
+	while (last_part > first_part && is_in_set(s1[last_part - 1], set))
+		last_part--;
+
+	trimmed = malloc(sizeof(char) * (last_part - first_part + 1));
+	if (trimmed == NULL)
+		return (NULL);
 	i = 0;
-	j = 0;
-	len = ft_strlen(s1);
-	trimlen = ftrimlen(len, s1, set);
-	news = malloc((trimlen + 1) * sizeof(char));
-	if (!news)
-		return (0);
-	while (s1[i] && isset(s1[i], set) == 1)
-		i++;
-	while (j < trimlen)
-	{
-		news[j] = s1[i];
-		i++;
-		j++;
-	}
-	news[j] = '\0';
-	return (news);
-}
+	while (first_part < last_part)
+		trimmed[i++] = s1[first_part++];
 
-int	main()
-{
-	printf("%s\n", ft_strtrim("abqbc", "abc"));
-	printf("%s\n", ft_strtrim("xavocadoyz", "xyz"));
+	trimmed[i] = 0;
+	return (trimmed);
 }
