@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 23:55:14 by zlaarous          #+#    #+#              #
-#    Updated: 2022/10/19 13:41:46 by zlaarous         ###   ########.fr        #
+#    Updated: 2022/10/20 16:03:58 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ SRCS		= ft_memset.c \
 			  ft_strjoin.c \
 			  ft_strtrim.c \
 			  ft_strmapi.c \
-			  ft_itoi.c \
+			  ft_itoa.c \
 
 # BNS_SRCS	= ft_lstnew.c \
 # 			  ft_lstadd_front.c \
