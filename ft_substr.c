@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:27:41 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/18 12:56:42 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/22 11:47:31 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	str[i] = '\0';
-
 	return (str);
 }
