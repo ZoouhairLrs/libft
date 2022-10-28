@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:37:30 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/23 23:11:01 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:18:26 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,12 @@ static int	ft_size_word(char const *s, char c, int i)
 	return (size);
 }
 
-// static void	ft_free(char **strs, int j)
-// {
-// 	while (j-- > 0)
-// 		free(strs[j]);
-// 	free(strs);
-// }
+static void	ft_free(char **strs, int j)
+{
+	while (j-- > 0)
+		free(strs[j]);
+	free(strs);
+}
 
 char	**ft_split(char const *s, char c)
 {
@@ -73,7 +73,7 @@ char	**ft_split(char const *s, char c)
 		size = ft_size_word(s, c, i);
 		if (!(strs[j] = ft_substr(s, i, size)))
 		{
-			// ft_free(strs, j);
+			ft_free(strs, j);
 			return (NULL);
 		}
 		i += size;
