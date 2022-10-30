@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 23:55:14 by zlaarous          #+#    #+#              #
-#    Updated: 2022/10/20 16:03:58 by zlaarous         ###   ########.fr        #
+#    Updated: 2022/10/30 15:56:13 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,12 +45,14 @@ SRCS		= ft_memset.c \
 			  ft_strtrim.c \
 			  ft_strmapi.c \
 			  ft_itoa.c \
+			  ft_split.c \
 
-# BNS_SRCS	= ft_lstnew.c \
-# 			  ft_lstadd_front.c \
-# 			  ft_lstsize.c \
-# 			  ft_lstlast.c \
-# 			  ft_lstadd_back.c \
+BNS_SRCS	= ft_lstnew.c \
+			  ft_lstadd_front.c \
+			  ft_lstsize.c \
+			  ft_lstlast.c \
+			  ft_lstadd_back.c \
+			  ft_lstclear.c \
 			  
 
 OBJS		= $(SRCS:%.c=%.o)
@@ -59,20 +61,23 @@ BNS_OBJS	= $(BNS_SRCS:%.c=%.o)
 
 FLAGS		= -Wall -Werror -Wextra
 
-$(NAME):
-	gcc $(FLAGS) -c $(SRCS) -I ./
-	ar rc $(NAME) $(OBJS)
-
 all: $(NAME)
 
-bonus: $(NAME)
-	gcc $(FLAGS) -c $(BNS_SRCS) -I ./
+%.o : %.c libft.h
+	cc $(FLAGS) -c $<
+
+$(NAME):$(OBJS)
+	ar rc $(NAME) $(OBJS)
+
+bonus:$(BNS_OBJS) all
 	ar rc $(NAME) $(BNS_OBJS)
 
 clean:
 	rm -f $(OBJS) $(BNS_OBJS)
-
+	
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all re clean fclean bonus

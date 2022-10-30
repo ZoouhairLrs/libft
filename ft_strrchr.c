@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 00:59:39 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/17 17:52:27 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/30 00:41:53 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,28 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*ret;
 	int		i;
+	char	*ca1;
+	char	*tmp;
 
-	ret = NULL;
+	ca1 = (char *)s;
 	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			ret = (char *)&s[i];
-		i++;
-	}
+	c = (char)c;
+	tmp = 0;
 	if (c == '\0')
-		ret = (char *)&s[i];
-	return (ret);
+	{
+		while (ca1[i])
+			i++;
+		return (ca1 + i);
+	}
+	else
+	{
+		while (*ca1)
+		{
+			if (*ca1 == c)
+				tmp = ca1;
+			ca1++;
+		}
+	}
+	return (tmp);
 }

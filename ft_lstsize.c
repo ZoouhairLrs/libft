@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 02:28:33 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/29 17:02:25 by zlaarous         ###   ########.fr       */
+/*   Created: 2022/10/29 20:26:34 by zlaarous          #+#    #+#             */
+/*   Updated: 2022/10/30 00:14:02 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	size_t			i;
-	unsigned char	*ca1;
-	unsigned char	ca2;
+	int		counter;
+	t_list	*curr;
 
-	ca1 = (unsigned char *)s;
-	ca2 = (unsigned char)c;
-	i = 0;
-	while (i < n)
+	counter = 0;
+	curr = lst;
+	while (curr != NULL)
 	{
-		if (ca1[i] == ca2)
-		{
-			return (&ca1[i]);
-		}
-		i++;
+		counter++;
+		curr = curr->next;
 	}
-	return (NULL);
+	return (counter);
 }
-
-// int main()
-// {
-// 	char s[] = "zouhair laaroussi";
-// 	int c = 'a';
-
-// 	printf("%s || ", ft_memchr(s, c, 5));
-// 	printf("%s", memchr(s, c, 5));
-// }

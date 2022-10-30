@@ -6,13 +6,13 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 22:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/19 13:38:36 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/29 20:10:30 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// char	f(unsigned int i, char c)
+// static char	f(unsigned int i, char c)
 // {
 // 	char	str;
 

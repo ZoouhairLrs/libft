@@ -6,20 +6,20 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/28 17:00:24 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/30 00:14:50 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	scape_space(const char *str, int *i)
+static void	space(const char *str, int *i)
 {
 	while (str[*i] == ' ' || str[*i] == '\t' || str[*i] == '\v'
 		|| str[*i] == '\r' || str[*i] == '\f' || str[*i] == '\n')
 		(*i)++;
 }
 
-static void	signe(char const *str, int *i, int *sign)
+static void	signer(char const *str, int *i, int *sign)
 {
 	if (str[*i] == '-')
 	{
@@ -40,8 +40,8 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	result = 0;
 	i = 0;
-	scape_space(str, &i);
-	signe(str, &i, &sign);
+	space(str, &i);
+	signer(str, &i, &sign);
 	while (ft_isdigit(str[i]) && str[i])
 	{
 		previous_result = result;
@@ -57,12 +57,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (sign * result);
-}
-
-int main()
-{
-  char str[] = "-123456789";
-  
-printf("%d\t", ft_atoi(str));
-printf("%d", atoi(str));
 }
