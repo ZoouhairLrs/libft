@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:26:03 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/17 03:31:34 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:54:13 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	int		i;
 
 	len = ft_strlen(s1) + 1;
-	ma = (char *)malloc(sizeof (char) * len);
+	ma = malloc(sizeof (char) * len);
 	if (ma == NULL)
 		return (NULL);
 	i = 0;

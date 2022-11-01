@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/30 00:14:50 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/01 14:14:59 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	space(const char *str, int *i)
 		(*i)++;
 }
 
-static void	signer(char const *str, int *i, int *sign)
+static void	sign_in(char const *str, int *i, int *sign)
 {
 	if (str[*i] == '-')
 	{
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 	result = 0;
 	i = 0;
 	space(str, &i);
-	signer(str, &i, &sign);
+	sign_in(str, &i, &sign);
 	while (ft_isdigit(str[i]) && str[i])
 	{
 		previous_result = result;
@@ -58,3 +58,4 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
+

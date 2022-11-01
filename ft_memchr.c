@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 02:28:33 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/29 17:02:25 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/01 14:22:16 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-// 	char s[] = "zouhair laaroussi";
-// 	int c = 'a';
-
-// 	printf("%s || ", ft_memchr(s, c, 5));
-// 	printf("%s", memchr(s, c, 5));
-// }

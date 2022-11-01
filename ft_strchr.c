@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:58:38 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/17 18:52:15 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:58:40 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 
 	ca1 = (char)c;
 	i = 0;
-	while (s || !s)
+	while (s)
 	{
 		if (s[i] == ca1)
 			return ((char *)&s[i]);

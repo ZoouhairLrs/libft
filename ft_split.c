@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:37:30 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/30 15:23:23 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:50:57 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,11 @@ static int	ft_size_word(char const *s, char c, int i)
 
 static void	ft_free(char **strs, int j)
 {
-	while (j-- > 0)
+	while (j > 0)
+	{
 		free(strs[j]);
+		j--;
+	}
 	free(strs);
 }
 
