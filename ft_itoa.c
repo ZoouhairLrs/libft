@@ -6,13 +6,13 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:43:11 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/20 18:37:18 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/04 12:59:50 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	len_num(long int nb)
+static size_t	len_num(long int nb)
 {
 	int	len;
 
@@ -54,10 +54,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-// int main()
-// {
-// 	printf("%s\n", ft_itoa(0));
-// 	printf("%s\n", ft_itoa(987654321));
-// 	printf("%s\n", ft_itoa(-123456789));
-// }

@@ -6,17 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 20:33:46 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/11/01 19:14:12 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/04 13:41:22 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_change(unsigned int i, char *s)
-{
-	i = 0;
-	s[i] = s[i] + 1;
-}
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -32,11 +26,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		}
 	}
 }
-
-// int main()
-// {
-// 	char s[] = "zouhair laaroussi";
-// 	void (*f)(unsigned int, char *) = ft_change;
-// 	ft_striteri(s, f);
-// 	printf("%s", s);
-// }
