@@ -6,17 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 22:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/11/04 13:33:25 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/06 16:46:46 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	f(unsigned int i, char str)
-{
-	str = 'z';
-	return (str);
-}
 
 char	*ft_strmapi(char const	*s, char (*f)(unsigned int, char))
 {
@@ -38,13 +32,4 @@ char	*ft_strmapi(char const	*s, char (*f)(unsigned int, char))
 	}
 	str[i] = '\0';
 	return (str);
-}
-
-int main()
-{
-	char	str1[] = "zouhair";
-	char * str2;
-
-	str2 = ft_strmapi(str1, *f);
-	printf("%s", str2);
 }

@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 23:55:14 by zlaarous          #+#    #+#              #
-#    Updated: 2022/11/03 15:05:25 by zlaarous         ###   ########.fr        #
+#    Updated: 2022/11/06 17:23:21 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,8 +52,6 @@ BNS_SRCS	= ft_lstnew.c \
 			  ft_lstsize.c \
 			  ft_lstlast.c \
 			  ft_lstadd_back.c \
-			  ft_lstclear.c \
-			  ft_lstdelone.c \
 			  
 
 OBJS		= $(SRCS:%.c=%.o)

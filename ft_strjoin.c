@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 12:58:00 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/10/18 18:06:02 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/04 16:50:52 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(str + (s1_len), s2, s2_len + 1);
 	return (str);
 }
-
-// int main()
-// {
-//     char s1[] = "peanut";
-//     char s2[] = "butter";
-
-//     printf("%s\n", ft_strjoin(s1, s2));
-
-//     return 0;
-// }

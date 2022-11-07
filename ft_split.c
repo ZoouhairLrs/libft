@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:37:30 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/11/01 18:50:57 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/06 15:30:20 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,14 +83,3 @@ char	**ft_split(char const *s, char c)
 	strs[j] = 0;
 	return (strs);
 }
-
-// int main()
-// {
-//     int s = 0;
-//     char trim[100] = "----abcdef----1337----khouribga";
-//     char **split = ft_split(trim,'-');
-//     for (size_t i = 0; split[i]; i++)
-//     {
-//         printf("%s\n",split[i]);
-//     }
-// }

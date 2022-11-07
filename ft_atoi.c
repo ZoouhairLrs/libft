@@ -6,19 +6,20 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/11/01 20:38:53 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/05 19:25:42 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void space(const char *str, int *i)
+static void	space(const char *str, int *i)
 {
-	while (str[*i] == ' ' || str[*i] == '\t' || str[*i] == '\v' || str[*i] == '\r' || str[*i] == '\f' || str[*i] == '\n')
+	while (str[*i] == ' ' || str[*i] == '\t' || str[*i] == '\v'
+		|| str[*i] == '\r' || str[*i] == '\f' || str[*i] == '\n')
 		(*i)++;
 }
 
-static void sign_in(char const *str, int *i, int *sign)
+static void	sign_in(char const *str, int *i, int *sign)
 {
 	if (str[*i] == '-')
 	{
@@ -29,12 +30,12 @@ static void sign_in(char const *str, int *i, int *sign)
 		(*i)++;
 }
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int i;
-	int sign;
-	long long result;
-	long long previous_result;
+	int			i;
+	int			sign;
+	long long	result;
+	long long	previous_result;
 
 	sign = 1;
 	result = 0;

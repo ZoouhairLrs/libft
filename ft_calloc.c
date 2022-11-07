@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 16:12:34 by zlaarous          #+#    #+#             */
-/*   Updated: 2022/11/01 21:00:27 by zlaarous         ###   ########.fr       */
+/*   Updated: 2022/11/05 14:00:38 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
-	size_t  total;
+	size_t	total;
 
 	total = count * size;
 	if (count != 0 && total / count != size)
